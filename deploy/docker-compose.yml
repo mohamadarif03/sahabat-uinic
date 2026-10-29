@@ -1,7 +1,7 @@
 services:
-  qurava:
-    container_name: qurava
-    image: qurava:latest
+  sahabat:
+    container_name: sahabat
+    image: sahabat:latest
     build:
       context: ..
       dockerfile: deploy/Dockerfile
