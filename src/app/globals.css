@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-outfit), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+}
+
+html {
+  font-size: 80%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #FAF8F1;
+  color: #14382B;
+  overflow-x: hidden;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 1023px) {
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
+/* Custom premium green scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #15803D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #166534;
+}
+
+/* Custom premium focal glows */
+.glow-accent {
+  box-shadow: 0 0 40px 10px rgba(34, 197, 94, 0.18);
+}
+
+@layer utilities {
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
